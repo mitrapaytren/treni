@@ -1,22 +1,27 @@
 ---
-title: "Cara Daftar PayTren: 3 Langkah Praktis Memulai Bisnis PayTren Yusuf Mansur (Update 2018)"
-date: 2018-02-12
-description: >-
-  Daftar PayTren sekarang serta ambil peluangnya untuk menghasilkan banyak uang, tanpa keluar rumah, tanpa ribet, tanpa harus banyak modal. Kerjaan mudah, hasil berkah, harta jadi melimpah.
+title: 'Cara Daftar PayTren: 3 Langkah Praktis Memulai Bisnis PayTren Yusuf Mansur
+  (Update 2018)'
+date: 2018-02-12 00:00:00 +0000
+description: Daftar PayTren sekarang serta ambil peluangnya untuk menghasilkan banyak
+  uang, tanpa keluar rumah, tanpa ribet, tanpa harus banyak modal. Kerjaan mudah,
+  hasil berkah, harta jadi melimpah.
 tags:
-  - paytren
+- paytren
 categories:
-  - bisnis paytren
+- bisnis paytren
 slug: cara-daftar-paytren
 authors:
-  - akhlis
-amp: 'amp'
+- akhlis
+amp: amp
 image: "/images/post/2018/01/cara-daftar-paytren.png"
-featured: featured
+featured:
+- featured
 header_bg: "#e67e22"
-layout: "post"
----
+layout: post
+outputs: []
+thumbnail: ''
 
+---
 <div class="content-list__wrapper">
     <div class="content-list__header">
         <span>3 Langkah Praktis Cara Daftar PayTren</span>
