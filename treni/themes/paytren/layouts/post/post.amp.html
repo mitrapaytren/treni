@@ -1,0 +1,56 @@
+{{ partial "header.amp.html" . }}
+
+<main id="site-main" class="site-main">
+   <div class="header-custom__amp">
+      <div class="container">
+          <header class="post-header__custom-amp">
+               <h1 class="post-title">{{ .Title }}</h1>
+           </header>
+           <div class="featured-image__custom-amp">
+                {{ if .Params.image }}  
+                <div class="post-media__custom-amp">
+                    <amp-img src="{{ .Params.image | relURL }}"
+                width="600" height="420" layout="responsive"></amp-img>
+                </div>
+                {{ end }}
+           </div>
+      </div>
+   </div>
+  
+    <div class="main-content post-layout">
+        <div class="content-area single-post single-post__wrapper">
+            <article class="post-article">
+                <div class="post-content">
+                    {{ .Content }}
+                </div>
+
+                {{ partial "register-box.amp.html" . }}
+
+                <footer class="post-footer">
+                    <div class="post-footer__wrapper">
+                        <div class="post-footer__tags">
+
+                        {{ if .Params.tags }}
+                        <span class="post-footer__tags-item"><b>Tags: </b>
+                        {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }} {{ end }}<a class="post-footer__tags-link" href="{{ "tags/" | relLangURL }}{{ . | urlize | lower }}" rel="tag">{{ . }}</a>{{ end }}
+                        </span>
+                        {{ end }}
+
+                        </div>
+                        
+                        {{ partial "social-share.amp.html" . }}
+                        
+                    </div>
+
+<!--                {{ partial "post-nav.html" . }}-->
+
+                </footer>
+            </article>
+        </div>
+        {{ partial "quote-box.amp.html" . }}
+        <!-- related posts with the same tags -->
+<!--            {{ partial "related-posts.html" . }}-->
+    </div>
+</main>
+
+{{ partial "footer.amp.html" . }}

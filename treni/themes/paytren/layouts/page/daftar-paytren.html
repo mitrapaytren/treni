@@ -1,0 +1,36 @@
+{{ partial "header.html" . }}
+
+<main id="site-main" class="site-main">
+    <div class="post-head container">
+        <header class="post-header">
+         
+            <h2 class="post-title">{{ .Title }}</h2>
+
+            <h4>Silakan isi form dengan data asli Anda</h4>
+ 
+        </header>
+    </div>
+  
+    <div class="main-content post-layout">
+        <div class="content-area single-post single-post__wrapper">
+            <div class="register-form treni-content">
+                <form method="POST" action="https://formspree.io/fluxstarter@gmail.com">
+                    <label>Nama Lengkap</label> : <input type="text" name="Nama" placeholder="Nama Lengkap"><br>
+                    <label>Jenis Kelamin</label> : <input type="text" name="Jenis Kelamin" placeholder="Laki-laki/Perempuan"><br>
+                    <label>Alamat Lengkap</label> : <input type="text" name="Alamat" placeholder="Alamat Lengkap"><br>
+                    <label>Kota</label> : <input type="text" name="Kota" placeholder="Kota"><br>
+                    <label>Propinsi</label> : <input type="text" name="Propinsi" placeholder="Propinsi"><br>
+                    <label>Nomor HP</label> : <input type="text" name="Nomor HP" placeholder="Nomor HP"><br>
+                    <label>Email Anda</label> : <input type="text" name="Email" placeholder="Email Anda"><br>
+                    <label>Pilih Lisensi</label> : <input type="radio" name="Lisensi" value="lisensi Trial"> Lisensi Trial ( Rp. 25.000 )<br>
+                    <p><input type="radio" name="Lisensi" value="lisensi Basic"> Lisensi Basic ( Rp. 350.000 )<br></p>
+                    <p><input type="radio" name="Lisensi" value="lisensi Titanium"> Lisensi Titanium ( Rp. 10.100.000 )<br></p>
+                    
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,242 @@
+/* Post Content
+/* ---------------------------------------------------------- */
+
+.wa-bg {
+background: #25d366;
+}
+.reg-bg {
+background: #f39c12;
+}
+.button {
+    font-size: 1.8rem;
+    padding: 12px 20px;
+    border-radius: 10px;
+    
+    & a {
+        color: var(--light-text-color);
+        text-decoration: none;
+    }
+}
+.button--space {
+    margin-right: 1em;
+}
+
+.post-layout {
+    background: var(--main-background);
+}
+.single-post__wrapper {
+    margin: 0 auto;
+    max-width: 720px;
+    width: 100%;
+}
+.single-post {
+     padding: 3em 0;
+}
+.post-header {
+    text-align: center;
+    padding: 1.5em 4em;
+}
+.header-custom__wrapper {
+    padding: 1.5em 0 0;
+    
+    & .post-title {
+        font-size: 3.5rem;
+        color: var(--light-text-color);
+    }
+    
+    & .featured-image {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+.post-header__custom {
+    text-align: center;
+    padding: 0 4em 1.5em;
+    border-bottom: 1px solid var(--orange);
+}
+.post-tags {
+    font-weight: bold;
+    color: var(--nav-background);
+}
+.post-title {
+    font-size: 2.8rem;
+    margin: 0.5em 0;
+}
+.post-author__link {
+    text-transform: capitalize;
+}
+.post-content p {
+    font-size: 1.7rem;
+}
+.hljs {
+    padding: 1.5em !important;
+}
+.sub-header__wrapper {
+    position: relative;
+    background-position: bottom;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+}
+.post-cover {
+    position: relative;
+}
+.post-image {
+    display: block;
+    margin: 0 auto;
+}
+.sub-header__wrapper:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    top: 0;
+    background-repeat: no-repeat;
+}
+.lightblue-color:before {
+    background: #7BA2B3;
+}
+.lightgreen-color:before {
+    background: #21BAB5;
+}
+.darkblue-color:before {
+     background-color: #0a3d62;
+}
+.darkviolate:before {
+    background-color: #5b4d77;
+}
+.greensea-color:before {
+    background-color: #268c9a;
+}
+.greenlight-color:before {
+    background-color: #018D8E;
+}
+.darkred-color:before {
+    background-color: #d34f4c;
+}
+.orange-color:before {
+    background-color: #f29145;
+}
+.lightred-color:before {
+    background: #EA4529;
+}
+.pink-color:before {
+    background: #F1545D;
+}
+.lightgrey-color:before {
+    background: #546E7B;
+}
+.sub-header__box {
+    padding: 1.5em 0 0;
+    margin-bottom: 1.5em;
+    
+    & h2 {
+        font-weight: 700;
+    }
+}
+.sub-header__space {
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+}
+.sub-header__intro {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--light-text-color);
+    position: relative;
+    margin-bottom: 0.5em;
+}
+.sub-header__title {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: var(--light-text-color);
+    position: relative;
+    margin: 0;
+}
+.content-list__wrapper {
+    border: 1px solid var(--border-color);
+    padding: 1em 1.5em 0;
+    margin-bottom: 2em;
+}
+.content-list__header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1em;
+    margin-bottom: 1.5em;
+    
+    & span {
+        font-weight: bold;
+        color: var(--primary-text-color);
+    }
+}
+.content-list__post {
+    & ul {
+        list-style: none;
+        padding: 0;
+    }
+
+     & > ul > li {
+         padding-left: 20px;
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 6px;
+            width: 6px;
+            left: 0;
+            top: 7px;
+            border: 2px solid var(--orange);
+        }
+    }
+}
+.register-box {
+    margin-bottom: 2em;
+}
+.register-box__head {
+    padding: 1em 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5em;
+
+    & .register-box__title {
+        margin: 0;
+    }
+}
+.register-box__body {
+    padding: 1em 1.5em 2em;
+}
+@media (--medium-screen) {
+    .post-header {
+        padding: 6em 4em 2em;
+
+        & .post-title {
+            font-size: 2.5rem;
+        }
+    }
+}
+@media (--small-screen) {
+    .single-post {
+        padding: 3em 1.5em;
+    }
+    .post-header .post-title {
+        font-size: 2rem;
+    }
+    .featured-image {
+        height: 380px;
+    }
+}
+@media (--only-small-screen) {
+    .featured-image {
+        height: 245px;
+    }
+}
+@media (--extra-small-screen) {
+    .post-header .post-title {
+        font-size: 1.8rem;
+    }
+    .featured-image {
+        height: 220px;
+    }
+}

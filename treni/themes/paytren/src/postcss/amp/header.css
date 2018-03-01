@@ -1,0 +1,51 @@
+.header-bar {
+    position: relative;
+    padding: 1em 0;
+    background: var(--orange);
+    box-shadow: var(--black-shadow);
+}
+.hamburger {
+    position: absolute;
+    text-align: center;
+    color: var(--orange);
+    background: var(--main-background);
+    border-radius: 50px;
+    line-height: 38px;
+    width: 38px;
+    height: 38px;
+    top: 17px;
+    left: 2em;
+    cursor: pointer;
+}
+.site-logo {
+    text-align: center;
+}
+.sidebar {
+  padding: 1em 8em 0 1.5em;
+  margin: 0;
+}
+.sidebar > li {
+  list-style: none;
+  margin-bottom:10px;
+}
+.sidebar a {
+  text-decoration: none;
+}
+.close-sidebar {
+    font-size: 1.5em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+}
+.amp-img amp-img {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (--small-screen) {
+    .sidebar {
+        padding: 0.75em 3em 0 1em;
+    }
+    .close-sidebar {
+        padding-left: 0.75em;
+    }
+}

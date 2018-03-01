@@ -1,0 +1,9 @@
+<div class="post-meta">
+
+    {{ range .Params.authors }}
+    <span class="post-author post-meta__item">By <a class="post-author__link" href="{{ "/" | absURL}}{{ . | urlize }}">{{ . }}</a></span>
+    {{ end }}
+    
+    <time class="post-published post-meta__item"><i class="icon-calendar"></i> {{ with .Site.Params.dateFormat }}{{ $.Date.Format . }}{{ else }}{{ .Date.Format "02 January 2006" }}{{ end }}</time>    
+    <span class="post-comment post-meta__item"><i class="icon-comment"></i> <a class="post-comment__link" href="{{ .Permalink }}#disqus_thread">Comments</a></span> 
+</div>  

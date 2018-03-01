@@ -1,0 +1,13 @@
+<div class="sub-header__wrapper sub-header__box lightred-color">
+    <h2 class="sub-header__title">Cara Menjalankan Bisnis PayTren?</h2>
+    <div class="post-cover">
+        <figure class="reg-img">
+           {{ if .IsNamedParams }}
+            <img class="post-image" src="{{.Get "src" }}" alt="">
+            {{ else }}
+            <img src="{{.Get 0}}" alt="">
+            {{ end }}
+        </figure>
+    </div>
+</div>
+

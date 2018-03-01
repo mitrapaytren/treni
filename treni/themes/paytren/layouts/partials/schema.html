@@ -1,0 +1,75 @@
+{{ if .IsHome }}
+<script type="application/ld+json">
+{ 
+"@context": "http://schema.org", 
+"@type": "WebSite", 
+"url": "{{ .Site.BaseURL }}", 
+"name": "{{ with $.Site.Data.setting }}{{ .site_title }}{{ end }}",
+"headline": "{{ with $.Site.Data.setting }}{{ .site_title }}{{ end }},
+"author": {
+  "@type": "Person",
+  "name": "{{ with $.Site.Data.setting }}{{ .author.name }}{{ end }}"
+},
+"publisher": {
+   "@type": "Organization",
+   "name": "{{ with $.Site.Data.setting }}{{ .page_title }}{{ end }}",
+   "logo": {
+     "@type": "ImageObject",
+     "url": "{{ with $.Site.Data.setting }}{{ .logo }}{{ end }}",
+     "width": 130,
+     "height": 36
+   }
+ },
+ "description": "{{ with $.Site.Data.setting }}{{ .site_description }}{{ end }}"
+}
+</script>
+{{ else }}
+<script type="application/ld+json">
+{{if eq .Section "post"}}
+    {
+     "@context": "http://schema.org",
+     "@type": "NewsArticle",
+     "mainEntityOfPage":{
+       "@type":"WebPage",
+       "@id":"{{ .Permalink }}"
+     },
+     "headline": "{{ .Title }}",
+     "image": {
+       "@type": "ImageObject",
+       "url": "{{ if .Params.image }}{{ .Params.image | relURL }}{{ end }}",
+       "height": 600,
+       "width": 420
+     },
+     "datePublished": "{{ time .Date }}",
+     "dateModified": "{{ time .Date }}",
+     "author": {
+       "@type": "Person",
+       "name": "{{ with $.Site.Data.setting }}{{ .author.name }}{{ end }}"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "{{ with $.Site.Data.setting }}{{ .page_title }}{{ end }}",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "{{ with $.Site.Data.setting }}{{ .logo }}{{ end }}",
+         "width": 130,
+         "height": 36
+       }
+     },
+     "description": "{{ .Description }}"
+    }
+{{ else }}
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": "{{ .Permalink }}", 
+      "name": "{{ .Title }}",
+       "author": {
+          "@type": "Person",
+          "name": "{{ with $.Site.Data.setting }}{{ .author.name }}{{ end }}"
+        },
+      "description": "{{ with $.Site.Data.setting }}{{ .site_description }}{{ end }}",
+    }
+{{ end }}
+</script>
+{{ end }}

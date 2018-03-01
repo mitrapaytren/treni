@@ -1,0 +1,29 @@
+{{ partial "header" . }}
+
+<main id="site-main" class="site-main">
+    <div class="post-head container">
+        <header class="post-header">
+            <h2 class="post-title">{{ .Title }}</h2>
+        </header>
+    </div>
+  
+    <div class="main-content post-layout">
+        <div class="content-area single-post single-post__wrapper">
+            <article class="post-article">
+                {{ if .Params.featured_image }}
+                <a class="featured-image__link" href="{{ .Permalink }}">        
+                    <div class="featured-image cover-image" style="background-image: url({{ .Params.featured_image | relURL }})"></div>
+                </a>
+                {{ end }}
+
+                <div class="post-content">
+                    {{ .Content }}
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

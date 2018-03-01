@@ -1,0 +1,42 @@
+<article class="post-feed clearfix">
+
+    {{ if .Params.image }}  
+        <div class="post-feed__media">
+            <a href="{{ .Permalink }}" class="post-link">
+               {{ if .Params.header_bg }}
+                <figure style="background-color: {{ .Params.header_bg }}">{{ end }}
+                    <img class="post-image img" src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                </figure>
+            </a>
+        </div>
+    {{ end }}
+    
+    <div class="post-feed__body">
+        <div class="post-feed__content">
+            <header class="post-feed__header">
+
+                {{ $baseUrl := .Site.BaseURL }}  
+                {{ range first 1 .Params.tags }}
+                <span class="post-tags"> <a class="post-tags__link" href="{{ $baseUrl }}tags/{{ . | urlize }}"># {{ . }}</a></span>
+                {{ end }}
+
+                <a class="post-feed__link" href="{{ .Permalink }}"><h3 class="post-feed__title">{{ .Title }}</h3></a>
+
+                <div class="post-meta">
+                    {{ range .Params.authors }}
+                    <span class="post-author post-meta__item">By <a class="post-author__link" href="{{ "/" | absURL}}{{ . | urlize }}">{{ . }}</a></span>
+                    {{ end }}
+                    <time class="post-published post-meta__item"><i class="icon-calendar"></i> {{ with .Site.Params.dateFormat }}{{ $.Date.Format . }}{{ else }}{{ .Date.Format "02 Jan 2006" }}{{ end }}</time>    
+                    <span class="post-comment post-meta__item"><i class="icon-comment"></i> <a class="post-comment__link" href="{{ .Permalink }}#disqus_thread">Comments</a></span> 
+                </div> 
+            </header>   
+
+            <div class="post-feed__summary">
+                <!--<p class="post-feed__excerpt"> {{ .Summary }} ...</p>-->
+
+                <p class="post-feed__excerpt">{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary }}{{ end }}</p>
+            </div> 
+        </div>
+        <a class="post-feed__read-more" href="{{ .Permalink }}">→ </a>
+    </div>
+</article>

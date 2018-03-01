@@ -1,0 +1,20 @@
+{{ partial "head.amp.html" . }}
+
+<body>
+    <header class="header-bar">
+        <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+        <div class="nav-brand"> 
+            {{ with $.Site.Data.setting }}
+            <div class="site-logo"><a class="site-link" href="{{ .Site.BaseURL }}"><amp-img src="{{ .logo }}" width="130" height="36" alt="mitra paytren"></amp-img></a></div>{{ end }} 
+        </div>
+    </header>
+    <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+        <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+        {{ with $.Site.Data.setting }}
+        <ul class="sidebar">
+            {{ range .main_menu }}
+            <li class=""><a class="" href="{{ $baseurl := .Site.BaseURL }}{{ .url }}">{{ .nama }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </amp-sidebar>

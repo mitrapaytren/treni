@@ -1,0 +1,9 @@
+<div {{ with .Get "class" }}class="sub-header__wrapper sub-header__box {{.}}"{{ end }}>
+   {{ with .Get "title" }}
+    <h2 class="sub-header__title">{{.}}</h2>{{ end }}
+    <div class="post-cover">
+        <figure class="reg-img">
+            <img class="post-image" src="{{.Get "src" }}" alt="{{.Get "alt"}}">
+        </figure>
+    </div>
+</div>

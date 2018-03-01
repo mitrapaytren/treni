@@ -1,0 +1,29 @@
+            <footer class="site-footer footer">
+                <div class="container footer-inner footer-home">
+                    
+                    <div class="footer-menu">
+                        <nav class="nav-footer">
+                            {{ with $.Site.Data.setting }}
+                            <ul class="menu-footer">
+
+                                {{ range .footer_menu }}
+                                <li class="menu-footer__item"><a class="menu-footer__link" href="{{ $baseurl := .Site.BaseURL }}{{ .url }}">{{ .nama }}</a></li>
+                                {{ end }}
+
+                            </ul>
+                            {{ end }}
+                        </nav>
+                    </div>
+
+                    <div class="footer-copyright">&copy; 2018 Hak Cipta Dilindungi. Dibuat dengan <i class='icon-heart'></i> oleh <a href="https://mitrapaytren.net"><b>Mitra PayTren</b></a> dengan <a href="https://hugo.com">Hugo</a> & <a href="https://netlify.com">Netlify</a></div>
+                    <div class="footer-arrow">
+                        <span><a href="#site-main" class="scroll-top"><i class="icon-up-open"></i></a></span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        {{ partial "js" . }}
+
+    </body>
+</html>

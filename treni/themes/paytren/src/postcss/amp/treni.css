@@ -1,0 +1,816 @@
+/*global style*/
+
+.tren-button {
+    margin-bottom: 2em;
+}
+
+.button {
+    font-size: 1.8rem;
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    & a {
+        color: var(--light-text-color);
+        text-decoration: none;
+    }
+}
+
+.button--space {
+    margin-right: 1em;
+}
+
+.is-center {
+    text-align: center;
+}
+.tren-color {
+    color: var(--orange);
+}
+.warning-color {
+    color: rgb(239, 252, 0);
+}
+
+.danger-color {
+    color: #f13407;
+}
+
+.wa-bg {
+    background: #25d366;
+}
+
+.reg-bg {
+    background: #f39c12;
+}
+.tren-content--light-bg {
+    background: var(--main-background);
+}
+
+.tren-content--dark-bg {
+    background: var(--slide-background);
+}
+
+.tren-title__bg {
+    background: var(--orange);
+}
+
+.tren-title__dark-bg {
+    background: #e67e22;
+}
+
+.cover-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.is-cover-fixed {
+    position: relative;
+    background-attachment: fixed;
+}
+
+.is-fixed-content {
+    position: relative;
+    z-index: 9;
+}
+
+.cover-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(rgba(37, 38, 50, 0.67), rgba(37, 38, 50, 0.92));
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.15);
+    transition: visibility 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+.tren-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tren-cover--center {
+    padding: 7em 2em;
+}
+
+.tren-cover--space {
+    padding: 2em;
+}
+
+.tren-info__text {
+    color: var(--light-text-color);
+}
+
+.tren-attention {
+    font-style: italic;
+    margin-bottom: 3em;
+}
+
+.tren-headline {
+    text-transform: uppercase;
+    font-size: 3.2rem;
+}
+
+.headline--center {
+    margin-bottom: 0.5em;
+}
+
+.headline--space {
+    margin-bottom: 2em;
+}
+
+/*tren layout*/
+
+.container {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
+}
+.clearfix {
+    lost-utility: clearfix;
+}
+
+.content-page {
+    width: 680px;
+    margin: 0 auto;
+}
+
+.page-register {
+    background: var(--main-background);
+}
+
+.tren-sub-title {
+    padding: 2em 0;
+    text-align: center;
+
+    & h2,
+    & h3,
+    & h4 {
+        margin: 0;
+    }
+}
+
+.tren-title__box,
+.tren-box {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.tren-title--big {
+    font-size: 3.2rem;
+}
+
+.tren-title--light,
+.tren-text--light p {
+    color: var(--light-text-color);
+}
+
+.tren-box {
+    padding: 3em 0 2em;
+}
+
+.tren-center {
+    text-align: center;
+}
+
+.tren-content {
+    padding: 2em 0;
+}
+.tren-content__title {
+    margin: 0;
+    padding: 2em 1.5em 0;
+}
+
+
+
+.tren-2-media {
+    lost-column: 1/2;
+}
+
+.tren-2-body {
+    lost-column: 1/2;
+}
+
+.tren-3-media {
+    lost-column: 1/3;
+}
+
+.tren-3-body {
+    lost-column: 2/3;
+}
+
+.tren-2-column {
+    lost-column: 1/2;
+}
+
+.tren-3-column {
+    lost-column: 1/3;
+}
+.insta-column {
+    lost-column: 1/3;
+}
+@media (--small-screen) {
+    .tren-2-media,
+    .tren-2-body,
+    .tren-3-media,
+    .tren-3-body,
+    .tren-2-column,
+    .tren-3-column,
+    .insta-column {
+        width: 100%;
+    }
+    .tren-2-media,
+    .tren-3-media,
+    .tren-2-column {
+        margin-bottom: 2em;
+    }
+}
+
+/*Home Layout*/
+
+.tren-banner {
+    background: url({{ $baseurl := .Site.BaseURL }}/images/bg-bl.svg) left bottom no-repeat,url({{ $baseurl := .Site.BaseURL }}/images/bg-br.svg) right bottom no-repeat, var(--carrot);
+    padding: 4em 1.5em;
+}
+.video-bg {
+    background-image: url({{ $baseurl := .Site.BaseURL }}/images/treni-video-background.jpg);
+}
+
+.tren-banner__body {
+    padding-top: 4em;
+}
+
+.tren-banner__content p {
+    color: var(--light-text-color);
+    font-size: 1.8rem;
+}
+
+.click-button {
+    padding: 14px 24px;
+    border-radius: 10px;
+    color: var(--orange);
+    background: var(--light-text-color);
+
+    & a {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    &:hover {
+        background: transparent;
+        border: 1px solid var(--light-text-color);
+
+        & a {
+            text-decoration: none;
+            color: var(--light-text-color);
+        }
+    }
+}
+
+.tren-register__wrapper {
+    margin-bottom: 2em;
+}
+
+.tren-register__body {
+    padding-top: 2em;
+
+    & h4 {
+        font-weight: 700;
+    }
+}
+
+.tren-register__header--center {
+    padding-top: 3em;
+    border-top: 1px solid var(--light-text-color);
+    margin-bottom: 3em;
+}
+
+
+/*treni layout*/
+
+.tren-attention {
+    font-style: italic;
+    margin-bottom: 3em;
+}
+
+.tren-headline {
+    text-transform: uppercase;
+    font-size: 3.2rem;
+}
+
+.headline--center {
+    margin-bottom: 0.5em;
+}
+
+.headline--space {
+    margin-bottom: 2em;
+}
+
+.tren-desc {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+.tren-info__text {
+    color: var(--light-text-color);
+}
+
+.tren-video video {
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+
+/*treni feature*/
+.tren-feature__body {
+    padding-left: 3em;
+
+    & ul {
+        list-style: none;
+        padding: 0;
+
+        & li {
+            margin: 0;
+            padding: 0;
+        }
+
+        & span {
+            float: left;
+        }
+    }
+}
+
+.tren-feature__icon {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin-top: 4px;
+}
+
+.icon-box {
+    color: var(--light-text-color);
+    background: var(--orange);
+}
+
+.icon-list {
+    border: 1px solid #25d366;
+    color: #25d366;
+}
+
+.tren-feature__extra {
+    & ul {
+        list-style: none;
+        padding: 0;
+
+        & li {
+            margin: 0;
+            padding: 0;
+
+            & span {
+                float: left;
+            }
+        }
+    }
+}
+
+.tren-feature__info,
+.tren-feature__info-extra {
+    margin-left: 68px;
+
+    & h4 {
+        margin-bottom: 0.5em;
+    }
+
+    & p {
+        font-size: 1.4rem;
+    }
+}
+
+.tren-learn {
+    margin-bottom: 2em;
+}
+
+.tren-learn__button {
+    border: 1px solid var(--orange);
+    background: transparent;
+    padding: 10px 12px;
+
+    & a:hover {
+        text-decoration: none;
+    }
+}
+
+.tren-learn__button--light {
+    border: 1px solid var(--light-text-color);
+    background: transparent;
+    padding: 10px 12px;
+
+    & a {
+        color: var(--light-text-color);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+/*treni benefit*/
+
+.tren-benefit__list {
+    & ul {
+        list-style: none;
+        padding: 0;
+
+        & li {
+            position: relative;
+            font-size: 1.5rem;
+            padding-left: 3em;
+            margin-bottom: 1.5em;
+
+            &:before {
+                content: '\e80d';
+                font-family: fontello;
+                font-size: 14px;
+                color: #25d366;
+                left: 0;
+                top: 5px;
+                border: 1px solid #25d366;
+                width: 28px;
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                margin-right: 12px;
+                position: absolute;
+            }
+        }
+    }
+}
+
+/*treni businness*/
+
+.tren-bisnis__wrapper {
+    & ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        & li {
+            padding: 0;
+            margin-bottom: 5em;
+        }
+    }
+}
+
+.tren-bisnis__image {
+    float: left;
+}
+
+.tren-bisnis__body {
+    margin-left: 11em;
+
+    & h4 {
+        margin-bottom: 0.5em;
+    }
+}
+
+/*treni stop*/
+
+.tren-stop__headline {
+    font-size: 3.8rem;
+    color: #f50909;
+    margin-bottom: 0.5em;
+}
+
+.tren-stop__arrow {
+    width: 340px;
+    margin: 0 auto;
+}
+
+.tren-testimoni {
+    position: relative;
+    padding: 3em 2em;
+    background: var(--main-background);
+}
+
+.treni-testimoni__headline {
+    text-align: center;
+
+    & h2 {}
+}
+
+.tren-insta {
+    position: relative;
+    width: 660px;
+    margin: 0 auto;
+    padding: 3em 0;
+}
+
+.tren-slider .owl-nav {
+    position: absolute;
+    padding: 4px 8px;
+    top: -70px;
+    right: 0;
+    border: 1px solid var(--border-color);
+
+    & .nav-slider {
+        display: inline-block;
+        font-size: 2rem;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
+}
+
+/*treni fail*/
+
+.tren-fail__text {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/*treni modul*/
+
+.mentoring-title {
+    font-size: 2.8rem;
+}
+.mentoring-header {
+    margin-bottom: 3em;
+}
+
+.mentoring-line {
+    border-bottom: 1px solid var(--main-background);
+    margin-bottom: 1.5em;
+}
+
+.mentoring-desc {
+    font-size: 1.9rem;
+}
+
+.mentoring-body {
+    color: var(--light-text-color);
+    padding-left: 3em;
+
+    & ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        & li {
+            margin-bottom: 1.5em;
+
+            & h4 {
+                color: var(--light-text-color);
+                font-size: 2.2rem;
+                line-height: 48px;
+                margin-left: 62px;
+            }
+        }
+    }
+}
+
+.mentoring-icon {
+    float: left;
+    display: block;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    border: 1px solid var(--light-text-color);
+}
+
+.tren-modul__cover,
+.tren-modul__content {
+    lost-column: 1/2;
+}
+
+.tren-modul__cover {
+    padding: 0 3em;
+}
+
+.tren-modul__content {
+    & ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        & li {
+            margin: 0;
+            padding: 0;
+            line-height: 42px;
+
+            & .modul-icon {
+                font-size: 36px;
+                width: 42px;
+                height: 42px;
+                line-height: 42px;
+                float: left;
+                margin-right: 32px;
+            }
+        }
+    }
+}
+
+.tren-modul__wrapper {
+    padding: 3em 2em;
+
+    & h4 {
+        margin-bottom: 2em;
+    }
+}
+
+.tren-modul__column {
+    lost-column: 1/2;
+
+    & ul {
+        margin: 0;
+        padding: 0;
+
+        & li {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.tren-modul__icon {
+    color: var(--wa-color);
+    font-size: 2rem;
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    border: 1px solid var(--wa-color);
+    margin-top: 4px;
+}
+
+.tren-modul__info {
+    width: 86%;
+    font-family: var(--font-heading);
+}
+
+/*treni price*/
+.tren-price {
+    font-size: 3.8rem;
+}
+.tren-price p {
+    color: var(--light-text-color);
+}
+
+
+.tren-quote {
+    display: flex;
+    align-items: center;
+}
+
+.tren-quote__content {
+    position: relative;
+    z-index: 9;
+}
+
+.tren-quote__text {
+    text-align: center;
+    color: #e8be37;
+}
+
+.tren-quote__one {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+}
+
+.tren-quote__two {
+    font-size: 2.6rem;
+    font-style: italic;
+}
+
+.tren-quote__three {
+    font-size: 3.4rem;
+}
+
+.tren-quote__four {
+    color: var(--light-text-color);
+}
+
+.register-form {
+    & label {
+        display: inline-block;
+        padding: 6px 0;
+        width: 200px;
+    }
+
+    & p {
+        margin-left: 214px;
+        margin-bottom: 0.5em;
+    }
+
+    & button {
+        padding: 10px 20px;
+        color: var(--light-text-color);
+        background: var(--treni-color);
+        margin-top: 2em;
+    }
+}
+
+.label-radio {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.tren-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.timer-box {
+    color: var(--secondary-text-color);
+
+    & b {
+        font-size: 3.2rem;
+        padding: 10px 22px;
+        border-top: 1px solid var(--orange);
+        border-bottom: 1px solid var(--orange);
+        margin-bottom: 1em;
+    }
+
+    &:last-child b {
+        border-right: 1px solid var(--orange);
+    }
+
+    & i {
+        display: inline-block;
+        margin-top: 1em;
+    }
+}
+
+.timer_days b {
+    color: var(--light-text-color);
+    background: var(--orange);
+}
+
+.tren-timer-out {
+    color: #f13407;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+.tren-bonus__demo {
+    margin-bottom: 2em;
+
+    & span {
+        margin-right: 12px;
+
+        & a {
+            color: var(--light-text-color);
+            padding: 8px 16px;
+            border-radius: 5px;
+            background: #25d366;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (--medium-screen) {
+    .tren-content,
+    .tren-sub-title {
+        padding: 2em 1.5em;
+    }
+    .tren-box {
+        padding: 3em 1.5em 2em;
+    }
+    .tren-feature__media,
+    .tren-feature__body,
+    .tren-modul__cover,
+    .tren-modul__content,
+    .tren-modul__column {
+        width: 100%;
+    }
+    .tren-insta {
+        width: 100%;
+    }
+    .tren-feature__body {
+        padding: 0;
+    }
+}
+@media (--small-screen) {
+    .tren-banner {
+        padding: 2em 1.5em 3em;
+    }
+    .tren-banner__body {
+        padding-top: 0;
+    }
+}

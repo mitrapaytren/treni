@@ -1,0 +1,49 @@
+            <footer class="site-footer footer {{ if .IsHome }}footer-home{{ end }}">
+                <div class="container footer-inner">
+                   {{if eq .Section "post"}}
+                    <div class="disclaimer">
+                        <div class="disclaimer-inner">
+                           
+                            <h3>DISCLAIMER</h3>
+                            
+                            <p>Website ini bukan merupakan website official PayTren melainkan website promosi mitra resmi PayTren. Berikut ini adalah link situs resmi Treni / PayTren</p>
+                            
+                            <p class="disclaimer-link"><a href="http://www.paytren.co.id" target="_blank" rel="noopener noreferrer">www.paytren.co.id</a> | <a href="http://www.treni.co.id" target="_blank" rel="noopener noreferrer">www.treni.co.id</a> | <a href="http://www.mytreni.com" target="_blank" rel="noopener noreferrer">www.mytreni.com</a> | <a href="http://www.belanjaqu.co.id" target="_blank" rel="noopener noreferrer">www.belanjaqu.co.id</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-social">
+
+                        {{ with $.Site.Data.setting }}
+                        <div class="social-links">
+                            {{ range .social }}
+                            <a class="social-links__icon" href="{{ .url }}"><i class="icon-{{ .icon }}"></i></a>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+
+                    </div>
+                     {{ end }}
+                    
+                    <div class="footer-menu">
+                        <nav class="nav-footer">
+                            {{ with $.Site.Data.setting }}
+                            <ul class="menu-footer">
+
+                                {{ range .footer_menu }}
+                                <li class="menu-footer__item"><a class="menu-footer__link" href="{{ $baseurl := .Site.BaseURL }}{{ .url }}">{{ .nama }}</a></li>
+                                {{ end }}
+
+                            </ul>
+                            {{ end }}
+                        </nav>
+                    </div>
+
+                    <div class="footer-copyright">&copy; 2018 Hak Cipta Dilindungi. Dibuat dengan <i class='icon-heart'></i> oleh <a href="https://mitrapaytren.net"><b>Mitra PayTren</b></a> dengan <a href="https://hugo.com">Hugo</a> & <a href="https://netlify.com">Netlify</a></div>
+                    <div class="footer-arrow">
+                        <span><a href="#site-main" class="scroll-top"><i class="icon-up-open"></i></a></span>
+                    </div>
+                </div>
+            </footer>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<div class="cover-image is-cover-fixed quote-bg">
+    <div class="tren-cover tren-cover--space container">
+        <div class="tren-info is-fixed-content">
+           <h3 class="tren-info__text tren-attention"><span class="warning-color">Wow!</span> Peluang Berharga ini berpotensi MELEDAKKAN tambahan INCOME Anda hingga PULUHAN JUTA RUPIAH per bulan!</h3>
+            <h2 class="tren-info__text tren-headline headline--space"><span class="warning-color">Ambil peluang ini!</span> Karena Anda akan menghasilkan banyak uang, tanpa keluar rumah, tanpa Ribet, tanpa harus banyak modal!</h2>
+            <h4 class="tren-info__text tren-tips"><span class="warning-color">Sekarang saatnya gunakan aplikasi PayTren agar transaksi harian anda lebih menguntungkan dan berpeluang menjadi penghasilan yang besar</span></h4>
+        </div>
+    </div>
+    <div class="cover-mask"></div>
+</div>
+
+<div class="tren-sub-title tren-title__bg">
+    <div class="container">
+        <h2 class="tren-title--light">Tinggu dulu! coba Anda ingat kembali pernahkah Anda mengalami situasi ketika Anda:</h2>
+    </div>
+</div>
+
+<div class="tren-reason tren-content tren-content--light-bg">
+    <div class="container clearfix">
+        <div class="tren-3-media">
+            <figure>
+                <img class="img" src="{{ $baseurl := .Site.BaseURL }}/images/kudu-melek.jpg" alt="manfaat aplikasi paytren">
+            </figure>
+        </div>
+        <div class="tren-3-body">
+            <p class="tren-reason__head">Sebelum Anda <strong>putuskan untuk menggunakan aplikasi PayTren</strong>, coba Anda ingat kembali <strong>pernahkah Anda mengalami situasi ketika Anda:</strong></p>
+            <ul>
+                <li><b>Frustasi</b> karena disaat Anda bepergian kemudian Anda butuh nelpon atau SMS seseorang tapi tidak punya pulsa, sedangkan anda sudah mondar-mandir nyari penjual pulsa tetap juga tidak menemukannya.</li>
+                <li><b>Stress</b> disebabkan Anda tiba-tiba kehabisan paket data internet pada tengah malam, padahal anda lagi butuh koneksi internet untuk menyelesaikan tugas yang sangat penting</li>
+                <li><b>Bingung</b> Nyari tempat buat beli tiket pesawat atau kereta api, padahal Anda lagi buru-buru mau bepergian</li>
+            </ul>
+            <p>Atau mungkin Anda pernah mengalami:</p>
+            <ul>
+                <li>Listrik rumah Anda tiba-tiba padam ditengah malam gara-gara Anda lupa ngisi pulsa listrik, dan mau beli pulsa listrik tapi penjualnya sudah pada tutup</li>
+                <li>Sibuk ngantri di loket berjam-jam hanya buat bayar tagihan Finance atau tagihan bulanan yang lain.</li>
+                <li>Terjebak macet saat mau pergi untuk membayar tagihan Telkom atau Speedy</li>
+                <li>Mau bermain game online tapi tidak tahu tempat membeli voucher games</li>
+                <li>Mau melakukan sedekah harian tapi tidak mau repot-repot keluar rumah</li>
+            </ul>
+            <p>Dan hal-hal membosankan yang berhubungan dengan transaksi keuangan lainnya...</p>
+        </div>
+    </div>
+</div>
+
+<div class="tren-register is-center tren-content--dark-bg">
+    <div class="tren-box">
+        <h4>Jika Anda pernah mengalami hal tersebut diatas, berarti Anda beruntung menemukan aplikasi <b><span class="tren-color">PayTren</span></b></h4>
+        <div class="tren-button">
+
+           {{ with $.Site.Data.setting.author }}
+            <button class="button wa-bg"><a href="https://api.whatsapp.com/send?phone={{ .whatsapp }}&text=Saya%20Mau%20Daftar%20PayTren%20Lisensi%20Basic%20%0AAtas%20%0ANama%20%3A%0AAlamat%20Lengkap%20%3A" target="_blank"><i class="icon-whatsapp"></i> | Ya, Saya Mau Daftar</a></button>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<div class="tren-sub-title tren-title__bg">
+    <div class="container">
+        <h2 class="tren-title--light">Apa itu Aplikasi PayTren?</h2>
+    </div>
+</div> 
+<div class="cover-image" style="background-image: url({{ $baseurl := .Site.BaseURL }}/images/treni-video-background.jpg)">
+    <div class="tren-video container">
+        <header class="tren-sub-title">
+            <h3 class="video-title">Rata-Rata 97% Orang Memahami PayTren Setelah Menonton Video Ini. Giliran Anda Sekarang!</h3>
+        </header>
+        <div class="tren-video__mask cover-image" style="background-image: url({{ $baseurl := .Site.BaseURL }}/images/treni-video-background.jpg)">
+        </div>
+        <div class="tren-video">
+            <video controls="">
+                 {{ if .Params.treni_video }}
+                <source type="video/mp4" src="{{ .Params.treni_video | relURL }}">  {{ end }}
+            </video>
+        </div>
+    </div>
+</div>

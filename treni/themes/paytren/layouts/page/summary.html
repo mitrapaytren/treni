@@ -1,0 +1,24 @@
+<article class="post-feed clearfix">
+    <div class="post-feed__media">
+        <a class="post-feed__link" href="{{ .Permalink }}">
+            {{ if .Params.featured_image }}
+            <div class="post-feed__image cover-image" style="background-image: url({{ .Params.featured_image | relURL }})"></div>
+            {{ end }}
+        </a>
+    </div>
+    <div class="post-feed__body">
+        <div class="post-feed__content">
+            <header class="post-feed__header">
+                <a class="post-feed__link" href="{{ .Permalink }}"><h3 class="post-feed__title">{{ .Title }}</h3></a>
+            </header>   
+
+            <div class="post-feed__summary">
+                <p class="post-feed__excerpt">{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary }}{{ end }}</p>
+            </div> 
+        </div>
+        <a class="post-feed__read-more" href="{{ .Permalink }}">→ </a>
+    </div>
+</article>
+  
+
+

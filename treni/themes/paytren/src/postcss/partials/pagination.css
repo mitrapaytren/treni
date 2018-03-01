@@ -1,0 +1,34 @@
+/* Pagination
+/* ---------------------------------------------------------- */
+
+.pagination {
+    position: relative;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 3em;
+}
+.pagination-page {
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    line-height: 39px;
+}
+.pagination-prev {
+    float: left;
+    line-height: 39px;
+}
+.pagination-next {
+    float: right;
+    line-height: 39px;
+}
+
+@media (--medium-screen) {
+    .pagination {
+        margin: 0 2em 3em;
+    }
+}
+@media (--small-screen) {
+    .pagination {
+        margin: 0 0 1em;
+    }
+}

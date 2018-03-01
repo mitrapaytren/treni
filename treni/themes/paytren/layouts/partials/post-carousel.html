@@ -1,0 +1,62 @@
+
+<div id="owl" class="post-loop loop owl-carousel owl-theme owl-loaded owl-drag">
+ 
+{{ range $key, $taxonomy := .Site.Taxonomies.featured }}
+{{ range $taxonomy.Pages }}
+   
+    <article class="post-carousel clearfix">
+        <div class="post-carousel__info">
+            <div class="post-carousel__content">
+
+                {{ range first 1 .Params.tags }}
+                <span class="post-carousel__tags"># {{ . }}</span>
+                {{ end }}
+
+                <a class="post-carousel__link" href="{{ .Permalink }}"><h2 class="post-carousel__title">{{ .Title }}</h2></a>
+
+                <div class="post-carousel__meta">
+                    <figure class="post-carousel__avatar author--small">
+                       
+                            <div class="author-image">
+
+                                {{ with .Params.authors }}
+                                {{ range $ind,$val := . }}
+                                {{$author := $val | urlize }}
+                                {{- with $.Site.GetPage "taxonomyTerm" "authors" $author}}
+                                    <img class="post-carousel__profile-image" src="{{ .Params.avatar | relURL }}" alt="{{ .Params.name }} avatar"/>                              
+                                {{ end -}}
+                                {{ end }}
+                                {{ end }}
+                             
+                            </div>
+                      
+                    </figure>
+
+                    {{ range .Params.authors }}
+                    <span class="post-carousel__name">By <a class="post-carousel__link" href="{{ "/" | absURL}}{{ . | urlize }}">{{ . }}</a></span>
+                    {{ end }}
+
+                    <time class="post-carousel__published"><i class="icon icon-calendar"></i> {{ with .Site.Params.dateFormat }}{{ $.Date.Format . }}{{ else }}{{ .Date.Format "02 Jan 2006" }}{{ end }}</time>    
+                </div>
+                <a class="post-carousel__read-more" href="{{ .Permalink }}">→ </a>   
+            </div>    
+        </div>
+       
+        {{ if .Params.image }}
+        <div class="post-carousel__media">  
+            <div class="post-carousel__image">
+              {{ if .Params.header_bg }}
+              <figure style="background-color: {{ .Params.header_bg }}">{{ end }}
+                   <img class="post-image img" src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+               </figure>
+            </div>
+        </div>
+        {{ end }}
+        
+       
+    </article>
+{{ end }} 
+{{ end }}
+   
+</div>
+

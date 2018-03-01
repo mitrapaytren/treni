@@ -1,0 +1,33 @@
+{{ partial "head.html" . }}
+
+<body>
+    <div class="site-wrapper">      
+        <header class="site-header header">
+            <div class="header-nav"> 
+                <div class="nav-wrapper container clearfix">
+                    <div class="nav-brand">
+                        <a class="site-link" href="{{ .Site.BaseURL }}">
+                            {{ with $.Site.Data.setting }}
+                            <picture class="site-logo"><img class="site-img" src="{{ .logo }}" alt=""></picture>
+                            {{ end }}
+                        </a>
+                    </div>
+                    <div class="nav-main">
+                        <div class="nav-mobile">
+                            <a class="nav-toggle" href="#!"><span class="nav-toggle__item"></span></a>
+                        </div>
+                        <nav class="nav-menu">
+                            {{ with $.Site.Data.setting }}
+                            <ul class="nav-menu__item menu">
+
+                                {{ range .main_menu }}
+                                <li class="menu-item"><a class="menu-item__link" href="{{ $baseurl := .Site.BaseURL }}{{ .url }}">{{ .nama }}</a></li>
+                                {{ end }}
+
+                            </ul>
+                            {{ end }}
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>

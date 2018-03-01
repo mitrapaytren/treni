@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<main id="site-main" class="site-main">
+    <header class="list-header">
+      <div class="container">
+        <h2 class="list-title">Posting Menarik tentang "{{ .Title }}"</h2>
+      </div>
+    </header>
+    <div class="main-content card-layout">
+        <div class="content-area container">
+            <div class="post-feed__wrapper">
+
+              {{ range .Data.Pages }}
+                {{ .Render "summary"}}
+              {{ end }}
+
+            </div>
+        </div>
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

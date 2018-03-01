@@ -1,0 +1,44 @@
+site_title: Cara Daftar PayTren Resmi dengan 3 Langkah Mudah (Update 2018)
+page_title: MITRAPAYTREN.NET
+site_description: Web Support PayTren desc setting
+logo: /images/logo.png
+googleAnalyticsUserID: ''
+author:
+    name: Akhlis Mujtahid
+    id_mitra: TN0108643
+    email: akhlis@ymail.com
+    whatsapp: '6285229009056'
+    twitter_name: Akhlis_Mujtahid
+    bbm: 7db3e061
+    avatar: /images/author.jpg
+main_menu:
+  - nama: Beranda
+    url: /paytren
+  - nama: Artikel
+    url: /post
+  - nama: Marketing Plan
+    url: /marketing-plan
+  - nama: Panduan
+    url: /panduan
+  - nama: Daftar
+    url: /daftar-paytren
+footer_menu:
+  - nama: Beranda
+    url: /
+  - nama: Tentang Kami
+    url: /tentang-kami
+  - nama: Hubungi Kami
+    url: /hubungi-kami
+social:
+  - icon: facebook
+    nama: facebook
+    url: 'https://facebook.com/namaanda'
+  - icon: twitter
+    nama: twitter
+    url: 'https://twitter.com/namaanda'
+  - icon: gplus
+    nama: gplus
+    url: 'https://gplus.com/namaanda'
+  - icon: instagram
+    nama: instagram
+    url: 'https://instagram.com/namaanda'

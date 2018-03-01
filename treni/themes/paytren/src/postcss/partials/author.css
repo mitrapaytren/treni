@@ -1,0 +1,15 @@
+/* Author Template
+/* ---------------------------------------------------------- */
+
+.author-page {
+    padding: 2em;
+    background: var(--slide-background);
+    margin-bottom: 3em;
+}
+.author-page__wrapper {
+    display: flex;
+}
+.author-media {
+    width: 210px;
+    margin-right: 2em;
+}

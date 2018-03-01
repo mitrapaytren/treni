@@ -1,0 +1,21 @@
+baseurl = "/"
+title = "Web Support PayTren"
+description = "Web Support Resmi Pendaftaran PayTren"
+languageCode = "id"
+theme = "paytren"
+paginate = "8" # Number of posts per page
+
+[permalinks]
+  post = "/:slug/"
+  page = "/:slug/"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+author = "authors"
+featured = "featured"
+
+
+[outputs]
+  home = ["HTML", "AMP", "RSS", "JSON"]
+  page = ["HTML", "AMP"]

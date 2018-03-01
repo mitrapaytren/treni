@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------
+Project:		Mitra PayTren Web Support
+Version:		1.0.0
+Last change: 	18/01/18
+-------------------------------------------------------------------*/
+
+@import "partials/global.css";
+@import "partials/fontello.css";
+
+@import "partials/header.css";
+@import "partials/owl-carousel.css";
+@import "partials/owl-theme-default.css";
+@import "partials/posts.css";
+@import "partials/pagination.css";
+@import "partials/post-content.css";
+@import "partials/highlighter.css";
+@import "partials/post-footer.css";
+@import "partials/related-posts.css";
+@import "partials/paytren.css";
+@import "partials/comments.css";
+/*@import "partials/sidebar.css";*/
+@import "partials/author.css";
+@import "partials/error.css";
+@import "partials/footer.css";

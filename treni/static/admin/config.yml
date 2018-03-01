@@ -1,0 +1,63 @@
+backend:
+  name: git-gateway
+
+media_folder: "static/images" # Folder where user uploaded files should go
+public_folder: "images"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "setting"
+    label: "Setting"
+    files:           
+      - file: "data/setting.yml"
+        label: "Global Setting"
+        name: "setting"
+        fields:
+          - {label: Judul, name: site_title, widget: string, required: false}
+          - {label: Deskripsi, name: site_description, widget: string, required: false}
+          - {label: Logo, name: logo, widget: "image", required: false}
+          - {label: Google Analytic ID, name: googleAnalyticsUserID, widget: string, required: false}
+          - {label: "Pengguna", name: author, widget: object, fields: [
+              {label: "Nama", name: "name", widget: string},
+              {label: "Email", name: "email", widget: string},
+              {label: "ID MITRA", name: "id_mitra", widget: string},
+              {label: "Whatsapp", name: "whatsapp", widget: "number", valueType: "string"},
+              {label: "BBM", name: "bbm", widget: string},
+              {label: "Twitter ID", name: "twitter_name", widget: string},
+              {label: "Foto Profil", name: "avatar", widget: "image", required: false}]}
+          - {label: "Main Menu", name: main_menu, widget: list, fields: [
+              {label: "Nama", name: "nama", widget: string},
+              {label: "URL", name: "url", widget: string}]}
+          - {label: "Footer Menu", name: footer_menu, widget: list, fields: [
+              {label: "Nama", name: "nama", widget: string},
+              {label: "URL", name: "url", widget: string}]}
+          - {label: "Akun Sosial", name: social, widget: list, fields: [
+              {label: "Icon", name: "icon", widget: string},
+              {label: "Nama", name: "nama", widget: string},
+              {label: "URL", name: "url", widget: string}]}
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "content/post" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Judul", name: "title", widget: "string"}
+      - {label: "Tanggal Terbit", name: "date", widget: "datetime"}
+      - {label: "Deskripsi", name: "description", widget: "text"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Tag", name: "tags", widget: "list"}
+      - {label: "Kategori", name: "categories", widget: "list"}
+      - {label: "Penulis", name: "authors", widget: "list", required: false}
+      - {label: "Gambar Sampul", name: "image", widget: "image", required: false}
+      - {label: "Warna Sampul", name: "header_bg", widget: "string", required: false}
+      - {label: "Layout", name: "layout", widget: "string", required: false}
+      - {label: "Konten", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    folder: "content/page"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields:
+     - {label: "Judul", name: "title", widget: "string"}
+     - {label: "Deskripsi", name: "description", widget: "text"}
+     - {label: "Gambar Sampul", name: "image", widget: "image", required: false}
+     - {label: "Konten", name: "body", widget: "markdown"}

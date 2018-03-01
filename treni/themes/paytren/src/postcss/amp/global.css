@@ -1,0 +1,320 @@
+:root {
+
+    --primary-color: hsl(0, 0%, 22%);
+    --primary-text-color: hsl(0, 0%, 22%);
+    --hovered-text-color: hsla(0, 0%, 22%, .8);
+    --secondary-text-color: hsl(0, 0%, 37%);
+    --light-text-color: hsl(0, 0%, 100%);
+    --expand-color: hsla(0, 0%, 6.7%, .6);
+    --main-background: hsl(0, 0%, 100%);
+    --body-background: hsl(0, 0%, 98%);
+    --slide-background: hsl(0, 0%, 96%);
+    --accent-color: hsl(0, 0%, 99%);
+    --nav-background: #d33a2c;
+    --red-color: #d33a2c;
+    --hovered-nav-background: hsl(0, 0%, 95%);
+    --border-color: hsl(0, 0%, 90%);
+    --black-shadow: 0px 4px 18px -3px rgba(17, 17, 17, .06);
+    --hovered-black-shadow: 0px 8px 24px -3px rgba(17, 17, 17, .20);
+    --link-color: #f39c12;
+    --hovered-link-color: #d35400;
+    --fb-color: #3b5999;
+    --tw-color: #55acee;
+    --gplus-color: #dd4b39;
+    --wa-color: #25d366;
+    --mail-color: #0084ff;
+    --treni-color: #f39c12;
+    --warning-color: rgb(247, 234, 0);
+    
+    --greensea: #16a085;
+    --nephritis: #27ae60;
+    --belizehole: #2980b9;
+    --darkblue: #0a3d62;
+    --wisteria: #8e44ad;
+    --midnightblue: #2c3e50;
+    --orange: #f39c12;
+    --carrot: #e67e22;
+    --pumpkin: #d35400;
+    --pomegranate: #c0392b;
+    --silver: #bdc3c7;
+    --concrete: #95a5a6;
+
+    --font-body: 'Open Sans', sans-serif;
+    --font-heading: 'Monserat', sans-serif;
+}
+
+@custom-media --extra-small-screen (max-width: 399.99px);
+@custom-media --small-screen (max-width: 767.99px);
+@custom-media --only-small-screen (width >= 400px) and (width <= 580px);
+@custom-media --medium-screen (max-width: 991.99px);
+@custom-media --only-medium-screen (width >= 768px) and (width <= 991.99px);
+@custom-media --large-screen (min-width: 992px);
+@custom-media --only-large-screen (width >= 992px) and (width <= 1199.99px);
+@custom-media --extra-large-screen (min-width: 1200px);
+
+
+/* #RESET
+/* --------------------------------------------------------------------- */
+
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin:  0;
+  padding: 0;
+}
+
+li > {
+
+  & ol,
+  & ul {
+      margin-bottom: 0;
+  }
+}
+ ul > li > ul {
+    list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset {
+  min-width: 0;
+  border: 0;
+}
+
+/* Base styles: opinionated defaults
+/* --------------------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--secondary-text-color);
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    line-height: 1.8em;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    background: var(--body-background);
+}
+::selection {
+    text-shadow: none;
+    background: var(--link-color);
+}
+
+input[type="text"],
+textarea {
+    border-width: inherit;
+    border: 1px solid var(--border-color);
+    padding: 6px 10px;
+    outline: none;
+    margin-bottom: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    padding: 0.5em 1em;
+    border: none;
+    outline: none;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote {
+    margin: 0 0 1.5em 0;
+}
+
+ol,
+ul {
+    padding: 0;
+    padding-left: 1em;
+}
+
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+    margin: 0.5em 0 1.2em 0.5em;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li {
+    margin: 0.5em 0;
+    line-height: 1.6em;
+}
+
+dt {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 120px;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: right;
+}
+
+dd {
+    margin: 0 0 5px 0;
+    text-align: left;
+}
+
+blockquote {
+    margin: 1.5em 0;
+    padding: 0.25em 1.6em;
+    border-left: var(--border-color) 0.3em solid;
+    background: color(var(--body-background) blackness(2%));
+}
+
+blockquote p {
+    margin: 0.8em 0;
+    font-family: monospace, monospace;
+    font-style: italic;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    font-family: var(--font-heading);
+    color: var(--primary-text-color);
+    line-height: 1.5;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    margin: 0 0 1em;
+    font-size: 3.2rem;
+}
+
+@media (--small-screen) {
+    h1 {
+        font-size: 2.6rem;
+    }
+}
+
+h2 {
+    margin: 0 0 1em;
+    font-size: 2.5rem;
+}
+
+@media (--small-screen) {
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+h3 {
+    margin: 0 0 1em;
+    font-size: 2.2rem;
+}
+
+@media (--small-screen) {
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+h4 {
+    margin: 0 0 1em;
+    font-size: 1.8rem;
+}
+
+h5 {
+    margin: 0 0 1em;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+h6 {
+    margin: 0 0 1em;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 1px 1px;
+    background: color(var(--body-background) blackness(6%));
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+table th,
+table td {
+    padding: 0.5em 1em;
+}
+
+table th {
+    background: color(var(--body-background) blackness(6%));
+}
+
+table td:hover {
+    background: color(var(--body-background) blackness(6%));
+    color: var(--secondary-text-color);
+}
+
+/* Background-color of the odd rows */
+table tr:nth-child(odd) {
+	  background: color(var(--body-background) blackness(2%));
+}
+
+/* Background-color of the even rows */
+table tr:nth-child(even) {
+	  background: color(var(--body-background) blackness(4%));
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: color(var(--border-color) blackness(20%));
+    font-size: 1.4rem;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--border-color);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--border-color);
+}

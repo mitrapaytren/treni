@@ -1,0 +1,7 @@
+<div {{ with .Get "class" }}class="sub-header__wrapper sub-header__box {{.}}"{{ end }}>
+   {{ with .Get "title" }}
+    <h2 id="{{.}}" class="sub-header__title">{{.}}</h2>{{ end }}
+    <div class="post-cover amp-img">
+        <amp-img alt="{{.Get "alt"}}" src="{{.Get "src" }}" width="{{.Get "width" }}" height="{{.Get "height" }}" layout="responsive"></amp-img>
+    </div>
+</div>

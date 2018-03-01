@@ -1,0 +1,43 @@
+{{ partial "header" . }}
+
+<main id="site-main" class="site-main" role="main">
+     <div class="author-page">
+         <div class="author-page__wrapper container">
+           
+            <div class="author-media">
+                <img class="author-image" src="{{ .Params.avatar | relURL }}" alt="{{ .Params.name }} avatar"/> 
+            </div>
+        
+
+            <div class="author-info">
+        
+                <h4 class="author-name"><a class="author-link" href="{{ .Permalink }}">{{ .Title }}</a></h4>
+
+                <p class="author-bio">{{ .Params.bio }}</p>
+                <span class="author-box__social social-profiles">
+                    <a class="social-profiles__icon" href="{{ .Params.facebook }}" target="_blank"><i class="icon-facebook"></i></a> 
+                    <a class="social-profiles__icon" href="{{ .Params.twitter }}" target="_blank"><i class="icon-twitter"></i></a>
+                    <a class="social-profiles__icon" href="{{ .Params.gplus }}" target="_blank"><i class="icon-gplus"></i></a>
+                    <a class="social-profiles__icon" href="{{ .Params.website }}" target="_blank"><i class="icon-link"></i>{{ .Params.website }}</a>
+                </span>
+            </div>
+         </div>
+    </div>  
+
+     <div class="main-content">
+        <div class="content-area container">
+            <div class="post-feed__wrapper">
+
+            {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
+                {{ .Render "summary"}}
+            {{ end }}
+
+            </div>
+                    
+            {{ partial "pagination.html" . }}
+
+        </div>
+    </div>
+</main>
+
+{{ partial "footer" . }}

@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+<main id="site-main" class="site-main">
+
+    {{ partial "home/home.html" . }}
+    
+    {{ .Content }}
+ 
+</main>
+
+{{ partial "footer-home.html" . }}

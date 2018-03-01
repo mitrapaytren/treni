@@ -1,0 +1,12 @@
+{{ if .Site.Params.post_navigation }}
+{{ if or (.PrevInSection) (.NextInSection) }}
+<nav class="post-nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	 {{ if .PrevInSection }}
+    <a class="prev-post" href="{{.PrevInSection.RelPermalink}}"><i class="icon-angle-left"></i> Artikel Sebelumnya</a> 
+    {{ end }}
+	{{ if .NextInSection }}
+    <a class="next-post" href="{{.NextInSection.RelPermalink}}">Artikel Selanjutnya <i class="icon-angle-right"></i></a> 
+   {{ end }}
+</nav>
+{{ end }}
+{{ end }}

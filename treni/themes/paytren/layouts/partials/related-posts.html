@@ -1,0 +1,39 @@
+{{ $related := first 8 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+
+{{ if $related }}
+<div class="container">
+    <section class="related-posts">
+        <h3 class="related-posts__title">Baca Juga Artikel Menarik Ini</h3>
+        <div class="related-posts__content clearfix">
+            {{ range $related }}
+            <div class="related-post">
+                {{ if .Params.image }}  
+                <div class="related-post__media">
+                    <a href="{{ .Permalink }}" class="post-link">
+                        {{ if .Params.header_bg }}
+                        <figure style="background-color: {{ .Params.header_bg }}">{{ end }}
+                            <img class="post-image img" src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                        </figure>
+                    </a>
+                </div>
+                {{ end }}  
+                <div class="related-post__body">
+                    <a href="{{ .RelPermalink }}" class="related-post__link"><p class="related-post__title">{{ .Title }}</p></a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }}
+
+
+    
+    
+
+    
+    
+    
+    
+    
+   

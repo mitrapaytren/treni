@@ -1,0 +1,62 @@
+{{ partial "header.amp.html" . }}
+
+<main id="site-main" class="site-main">
+    <div class="post-head container">
+        <header class="post-header">
+            {{ $baseUrl := .Site.BaseURL }}  
+            {{ range .Params.tags }}
+            <span class="post-tags"> <a class="post-tags__link" href="{{ $baseUrl }}tags/{{ . | urlize }}"># {{ . }}</a></span>
+            {{ end }}
+
+            <h1 class="post-title">{{ .Title }}</h1>
+
+            {{ partial "post-meta" . }}
+ 
+        </header>
+    </div>
+  
+    <div class="main-content post-layout">
+        <div class="content-area single-post single-post__wrapper">
+            <article class="post-article">
+                
+                {{ if .Params.image }}  
+                    <div class="post-media">
+                       <amp-img src="{{ .Params.image | relURL }}"
+  width="600" height="420" layout="responsive"></amp-img>
+                    </div>
+                {{ end }}
+
+                <div class="post-content">
+                    {{ .Content }}
+                </div>
+
+                <footer class="post-footer">
+                    <div class="post-footer__wrapper">
+                        <div class="post-footer__tags">
+
+                        {{ if .Params.tags }}
+                        <span class="post-footer__tags-item"><b>Tags: </b>
+                        {{ range $index, $tag := .Params.tags }}{{ if gt $index 0 }} {{ end }}<a class="post-footer__tags-link" href="{{ "tags/" | relLangURL }}{{ . | urlize | lower }}" rel="tag">{{ . }}</a>{{ end }}
+                        </span>
+                        {{ end }}
+
+                        </div>
+
+                        {{ partial "social-share.html" . }}
+
+                    </div>
+
+                    {{ partial "post-nav.html" . }}
+
+                </footer>
+            </article>
+
+            <!-- related posts with the same tags -->
+            {{ partial "related-posts.html" . }}
+
+
+        </div>
+    </div>
+</main>
+
+{{ partial "footer.html" . }}

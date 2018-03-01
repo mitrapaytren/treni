@@ -1,0 +1,51 @@
+{{ partial "header" . }}
+<main id="site-main" class="site-main" role="main">
+   
+	{{- if not .IsHome}}
+	{{- with .Title }}
+	<header class="page-list">
+		<div class="page-list__wrapper container">
+			<h2 class="page-list__title">Buku-buku Bisnis Terbaik Koleksi dari {{ . }}</h2>
+		</div>
+	</header>
+	{{- end }}
+	{{- end }}
+
+       <div class="main-content">
+        <div class="content-area container">
+            <div class="book-card__wrapper clearfix">
+
+             
+              {{ range .Paginator.Pages }}
+              <div class="book-card">
+                <div class="book-card__image">
+                  <a class="book-card__link" href="{{ .Permalink }}">
+                  {{ if .Params.book_cover }}
+                  <img src="{{ .Params.book_cover | relURL }}" alt="{{ .Title }}"/>
+                  {{ end }}
+                  </a>
+                </div>  
+                <div class="book-card__info">
+                  <h3><a href="{{ .Permalink}}">{{ .Title }}</a></h3>
+                  {{ if .Params.price }}
+                  <p class="book-price">{{ .Params.price }}</p>
+                  {{ end }}
+
+                  {{ if .Params.link_btn }}
+                  <button class="btn btn-buy"><a href="{{ .Params.link_btn | relURL }}">Beli Sekarang</a></button>
+                  {{ end }}
+                </div>
+              </div>
+              {{ end }}
+
+                                  
+            {{ partial "pagination.html" . }}
+  
+
+            </div>
+        </div>
+    </div>
+</main>
+       
+{{ partial "footer" . }}
+        

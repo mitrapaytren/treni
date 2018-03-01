@@ -1,0 +1,55 @@
+{
+  "name": "simply",
+  "description": "Beautiful, minimal and responsive Ghost theme for passionate blogging.",
+  "demo": "https://demo.fluxtheme.com/flynco",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=1.0.0"
+  },
+  "license": "Commercial used only",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "author": {
+    "name": "Fluxthemes",
+    "email": "fluxtheme@gmail.com",
+    "url": "https://fluxtheme.com"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine",
+      "Blogging",
+      "Ghost",
+      "Portfolio",
+      "Responsive"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "blogging",
+    "responsive",
+    "portfolio"
+  ],
+  "bugs": "fluxtheme@gmail.com",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "cssnano": "^4.0.0-rc.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.12.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.7",
+    "lost": "^8.2.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0"
+  },
+  "config": {
+    "posts_per_page": 10
+  }
+}

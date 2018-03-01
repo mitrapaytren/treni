@@ -1,0 +1,40 @@
+<div class="register-box tren-content--dark-bg">
+    <div class="register-box__head tren-title__bg">
+        <h4 class="register-box__title is-center tren-title--light">Ya, Saya Beneran Mau Daftar PayTren. Berapa Investasinya?</h4>
+    </div>
+    <div class="register-box__body is-center">
+        <p>Cukup dengan membeli <b>Lisensi Basic PayTren</b> saja, Anda sudah resmi Menjadi Mitra Bisnis PayTren yang berlaku seumur hidup, tanpa ada biaya bulanan, juga tanpa belanja wajib ( Tupo )</p>
+        <h3 class="tren-price danger-color">Rp. 350.000,-</h3>
+        <div class="tren-button">
+            <button class="button reg-bg"><a href="{{ $baseurl := .Site.BaseURL }}/daftar-paytren" target="_blank">Daftar Sekarang</a></button>
+        </div>
+        <p>atau</p>
+        <div class="tren-button">
+            {{ with $.Site.Data.setting.author }}
+            <button class="button wa-bg"><a href="https://api.whatsapp.com/send?phone={{ .whatsapp }}&text=Saya%20Mau%20Daftar%20PayTren%20Lisensi%20Basic%20%0AAtas%20%0ANama%20%3A%0AAlamat%20Lengkap%20%3A" target="_blank"><i class="icon-whatsapp"></i> | Daftar Via Whatsapp</a></button>
+            {{ end }}
+        </div>
+
+        <div class="tren-bonus__text is-center">
+            <p>Khusus buat Anda kalau memutuskan Daftar PayTren sebelum tanggal <b><span class="danger-color">5 Maret 2018</span></b>, kami akan memberi <b>BONUS ISTIMEWA</b> dengan membuatkan <b class="danger-color">Website Support PayTren Profesional</b> senilai:</p>
+            <h2 class="tren-price danger-color">Rp. 699.000,-</h2>
+
+            <div class="tren-bonus__demo tren-button is-center">
+                <button class="button wa-bg button--space"><a href="https://treni.netlify.com" target="_blank">Lihat Demo</a></button>
+                <button class="button wa-bg button--space"><a href="https://treni-ui.netlify.com" target="_blank">Lihat Demo UI</a></button>
+            </div>
+            
+        </div>
+        
+        <div class="tren-bonus__text is-center">
+            <p><b class="danger-color">INGAT!!!</b> Dengan memiliki Website Support PayTren sendiri, Anda bisa lebih maksimal dalam memasarkan lisensi PayTren menggunakan teknik SEO maupun menggunakan media promosi lainnya. Dan pastinya peluang untuk terjadi closing juga lebih besar.</p>
+        </div>
+
+        {{ with $.Site.Data.setting.author }}
+        <div class="">
+            <h3 class="tren-support__headline">Butuh Bantuan? Hubungi Sponsor PayTren</h3>
+            <h4>Nama: {{.name}} ( ID Mitra {{ .id_mitra }} ) Telp/SMS/Whatsapp: {{ .whatsapp }}</h4>
+        </div>
+        {{ end }}
+    </div>
+</div>
